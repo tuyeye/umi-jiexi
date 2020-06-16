@@ -17,6 +17,6 @@ links:[
 ],
 
   routes: [
-    { path: '/', component: '@/pages/index' },
+    { path: '/', component: '@/pages/index',title:'腾讯视频、优酷视频、土豆视频、爱奇艺视频解析 - 涂叶解析' },
   ],
 });
