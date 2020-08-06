@@ -61,7 +61,7 @@ const page: React.FC<{}> = () => {
           </div>
         )
       }
-      <p className={style.footer}>© {(new Date()).getFullYear()} 涂叶云</p>
+      <p className={style.footer}>© {(new Date()).getFullYear()} <a href='http://www.sanqii.cn' target='_blank'>三七网</a></p>
     </>
   )
 }
