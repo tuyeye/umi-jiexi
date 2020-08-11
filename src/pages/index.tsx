@@ -47,7 +47,7 @@ const page: React.FC<{}> = () => {
             <Spin spinning={pageState.loading} tip="载入中，请稍候 ..." indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />}>
               <iframe
                 className={style.ifas}
-                src={`https://www.1717yun.com/jx/ty.php?url=` + pageState.url}
+                src={`https://www.1717yun.com/jx/ty.php?url=${pageState.url}`}
                 width="100%"
                 height={640}
                 scrolling="no"
