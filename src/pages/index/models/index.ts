@@ -5,7 +5,8 @@ export default {
     namespace: 'index',
     state: {
         url: "",
-        loading: false
+        loading: false,
+        searchUrl: ""
     },
     effects: {
         *sendMails({ payload }: any, { call }: any) {
@@ -23,7 +24,8 @@ export default {
                 type: 'save',
                 payload: {
                     ...res,
-                    loading: true
+                    loading: true,
+                    searchPage: payload.searchPage
                 }
             })
         },

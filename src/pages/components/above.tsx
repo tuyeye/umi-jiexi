@@ -36,17 +36,28 @@ const theNav: FC<any> = ({ dispatch }) => {
     )
 }
 
-const theVideo: FC<any> = ({ index: { url, loading }, dispatch }) => {
+const theVideo: FC<any> = ({ index: { url, loading, searchPage}, dispatch }) => {
 
     const loaded = async () => {
         await dispatch({ type: `${namespace}/loaded` });
         message.success("视频已加载");
     }
 
+    const changeLine = async () => {
+        await dispatch({
+            type: `${namespace}/fetch`,
+            payload: {
+                originPage: window.location.href,
+                searchPage,
+                line:"12"
+            }
+        })
+    }
+
     return (
         <div className={style.video_area}>
-
-            {url && (<Alert message="手机端访问解析视频带广告影响观看，请使用浏览器自带全屏功能。" type="info" showIcon closable style={{ marginBottom: "10px" }} />)}
+{searchPage}
+            {url && (<Alert message={<span>手机端访问解析视频带广告影响观看，请使用浏览器自带全屏功能。不是你想要的结果？ <a style={{ color: '#ec5658' }} onClick={changeLine}>切换源试试看！</a></span>} type="info" showIcon closable style={{ marginBottom: "10px" }} />)}
 
             {url && (
                 <Spin spinning={loading} tip="载入中，请稍候 ..." indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />}>
@@ -74,11 +85,14 @@ const theSearch: FC<any> = ({ dispatch }) => {
                 type: `${namespace}/fetch`,
                 payload: {
                     originPage: window.location.href,
-                    searchPage: value
+                    searchPage: value,
+                    line:"11"
                 }
             })
         }
     }
+
+
 
     return (
         <div style={{ textAlign: "center" }}>
@@ -87,6 +101,7 @@ const theSearch: FC<any> = ({ dispatch }) => {
                 size="large"
                 placeholder='复制剧集链接至此'
                 onSearch={search}
+
             />
         </div>
     )
@@ -127,7 +142,7 @@ const theFooter: FC<any> = ({ dispatch }) => {
             </div>
             <Modal
                 visible={state.visible}
-                title="为了提供更优质服务，请告诉我，您遇到了什么问题？"
+                title="意见反馈"
                 onOk={submit}
                 onCancel={() => setState({ ...state, visible: false })}
                 okText="提交问题"
@@ -138,7 +153,7 @@ const theFooter: FC<any> = ({ dispatch }) => {
                 <Form form={form}>
                     <Form.Item name="content" rules={[{ required: true, message: '请描述您的问题' }]} >
                         <TextArea
-                            placeholder="在此描述您遇到的问题"
+                            placeholder="为了提供更优质服务，请告诉我，您遇到了什么问题？"
                             allowClear
                             autoSize={{ minRows: 4 }}
                         />
