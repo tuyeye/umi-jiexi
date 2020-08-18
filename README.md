@@ -1,15 +1,3 @@
-# 解析站源码
+# 新增解析源更改
 
-## Getting Started
-
-Install dependencies,
-
-```bash
-$ yarn
-```
-
-Start the dev server,
-
-```bash
-$ yarn start
-```
+新增线路切换源功能以获取更多结果，若界面还是老界面，清空浏览器缓存即可。
