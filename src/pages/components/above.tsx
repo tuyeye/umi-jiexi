@@ -56,7 +56,6 @@ const theVideo: FC<any> = ({ index: { url, loading, searchPage}, dispatch }) => 
 
     return (
         <div className={style.video_area}>
-{searchPage}
             {url && (<Alert message={<span>手机端访问解析视频带广告影响观看，请使用浏览器自带全屏功能。不是你想要的结果？ <a style={{ color: '#ec5658' }} onClick={changeLine}>切换源试试看！</a></span>} type="info" showIcon closable style={{ marginBottom: "10px" }} />)}
 
             {url && (
