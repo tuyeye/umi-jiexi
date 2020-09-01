@@ -56,7 +56,7 @@ const theVideo: FC<any> = ({ index: { url, loading, searchPage}, dispatch }) => 
 
     return (
         <div className={style.video_area}>
-            {url && (<Alert message={<span>手机端访问解析视频带广告影响观看，请使用浏览器自带全屏功能。不是你想要的结果？ <a style={{ color: '#ec5658' }} onClick={changeLine}>切换源试试看！</a></span>} type="info" showIcon closable style={{ marginBottom: "10px" }} />)}
+            {url && (<Alert message={<span>手机端访问解析视频带广告影响观看，请使用浏览器自带全屏功能，推荐使用 UC浏览器。不是你想要的结果？ <a style={{ color: '#ec5658' }} onClick={changeLine}>切换源试试看！</a></span>} type="info" showIcon closable style={{ marginBottom: "10px" }} />)}
 
             {url && (
                 <Spin spinning={loading} tip="载入中，请稍候 ..." indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />}>
@@ -138,6 +138,8 @@ const theFooter: FC<any> = ({ dispatch }) => {
                 <a href='http://blog.sanqii.cn' target='_blank'>作者博客</a>
                 <Divider type="vertical" />
                 <a href='http://pic.sanqii.cn' target='_blank'>4k壁纸</a>
+                <Divider type="vertical" />
+                <a href='http://bt.sanqii.cn' target='_blank'>种子搜索神器</a>
             </div>
             <Modal
                 visible={state.visible}
