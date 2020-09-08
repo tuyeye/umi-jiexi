@@ -135,11 +135,11 @@ const theFooter: FC<any> = ({ dispatch }) => {
                 <Divider type="vertical" />
                 <a onClick={() => setState({ ...state, visible: true })} style={{ color: '#ec5658' }}>反馈问题</a>
                 <Divider type="vertical" />
-                <a href='http://blog.sanqii.cn' target='_blank'>作者博客</a>
+                <a href='http://blog.sanqi.us' target='_blank'>作者博客</a>
                 <Divider type="vertical" />
-                <a href='http://pic.sanqii.cn' target='_blank'>4k壁纸</a>
+                <a href='http://pic.sanqi.us' target='_blank'>4k壁纸</a>
                 <Divider type="vertical" />
-                <a href='http://bt.sanqii.cn' target='_blank'>种子搜索神器</a>
+                <a href='http://bt.sanqi.us' target='_blank'>种子搜索神器</a>
             </div>
             <Modal
                 visible={state.visible}
