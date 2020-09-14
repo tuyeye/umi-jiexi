@@ -98,7 +98,7 @@ const theSearch: FC<any> = ({ dispatch }) => {
             <Search
                 style={{ width: "90%", marginTop: "100px" }}
                 size="large"
-                placeholder='复制剧集链接至此'
+                placeholder='复制视频链接到这里，然后回车～'
                 onSearch={search}
 
             />
@@ -131,15 +131,17 @@ const theFooter: FC<any> = ({ dispatch }) => {
     return (
         <>
             <div className={style.footer}>
-                © {(new Date()).getFullYear()} <a href='http://www.sanqii.cn' target='_blank'>三七网</a>
+                © {(new Date()).getFullYear()} <a href='http://www.sanqi.us' target='_blank'>彼岸花网</a>
                 <Divider type="vertical" />
-                <a onClick={() => setState({ ...state, visible: true })} style={{ color: '#ec5658' }}>反馈问题</a>
+                <a onClick={() => setState({ ...state, visible: true })} style={{ color: '#ec5658' }}>Bug 反馈</a>
                 <Divider type="vertical" />
                 <a href='http://blog.sanqi.us' target='_blank'>作者博客</a>
+               <br />
+                <a href='http://pic.sanqi.us' target='_blank'>超超超清5k壁纸</a>
                 <Divider type="vertical" />
-                <a href='http://pic.sanqi.us' target='_blank'>4k壁纸</a>
-                <Divider type="vertical" />
-                <a href='http://bt.sanqi.us' target='_blank'>种子搜索神器</a>
+                <a href='http://bt.sanqi.us' target='_blank'>种子搜索神器（老司机）</a>
+                <br />
+                <a href='https://github.com/tuyeye/bian-alipay' target='_blank' >个人开发者在线支付接口</a>
             </div>
             <Modal
                 visible={state.visible}
