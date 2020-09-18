@@ -10,15 +10,15 @@ interface getUrlData {
 }
 
 export async function upRecord(params: upData) {
-    return request('http://api.sanqi.us/api/recordip', { params })
+    return request('http://api.sanqii.cn/api/recordip', { params })
 }
 
 export async function getUrl(params: getUrlData) {
-    return request('http://api.sanqi.us/api/GetJxAddress', { params })
+    return request('http://api.sanqii.cn/api/GetJxAddress', { params })
 }
 
 export async function sendMail(params: any) {
-    return request('http://api.sanqi.us/api/sendMail', {
+    return request('http://api.sanqii.cn/api/sendMail', {
         method: 'post',
         data: params
     })
