@@ -2,4 +2,4 @@
 
 新增线路切换源功能以获取更多结果，若界面还是老界面，清空浏览器缓存即可。
 
-项目迁移至 www.sanqii.cn 中，原地址重定向到新的地址：http://www.sanqii.cn/jiexi2
+项目迁移至 www.sanqii.cn 中，原地址重定向到新的地址：http://www.sanqii.cn/jiexi2 如果打开页面不存在，请清空浏览器缓存就可以了
